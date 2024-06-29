@@ -1,0 +1,26 @@
+@import 'normalize.css';
+@import 'variables.scss';
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@font-face {
+	font-family: 'Ubuntu-Regular';
+	src: url('/fonts/Ubuntu-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	font-family: 'Ubuntu-Regular', sans-serif;
+}
+
+body {
+	@include size(100%, 100%);
+}
+
+#app {
+	@include size(100%, 100%);
+}
