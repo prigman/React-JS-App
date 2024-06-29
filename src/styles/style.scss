@@ -6,10 +6,36 @@
 	height: $height;
 }
 
+@mixin maxSize($max-width, $max-height) {
+	max-width: $max-width;
+	max-height: $max-height;
+}
+
+@font-face {
+	font-family: 'Ubuntu-Regular';
+	src: url('/fonts/Ubuntu-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
 @font-face {
 	font-family: 'Ubuntu-Regular';
 	src: url('/fonts/Ubuntu-Regular.ttf');
-	font-weight: normal;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu-Regular';
+	src: url('/fonts/Ubuntu-Medium.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu-Regular';
+	src: url('/fonts/Ubuntu-Bold.ttf');
+	font-weight: 700;
 	font-style: normal;
 }
 
@@ -17,10 +43,132 @@ html {
 	font-family: 'Ubuntu-Regular', sans-serif;
 }
 
+ul {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	@include size(100%, 100%);
 }
 
-#app {
-	@include size(100%, 100%);
+h1 {
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	margin: 0;
+}
+
+#App {
+	.header {
+		//@include size(100%, 72px);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// flex-wrap: wrap;
+		.header__container{
+			@include size($container-weight, 52px);
+			margin-top: 20px;
+			margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			.header__navbar {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				li {
+					font-weight: 700;
+					text-wrap: nowrap;
+					margin: 0 20px;
+					cursor: pointer;
+					&:first-child{
+						margin: 0 20px 0 0;
+					}
+					&:last-child {
+						margin: 0 0 0 20px;
+					}
+				}
+			}
+			.header__contacts {
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				.contacts__block {
+					max-width: 100%;
+					display: flex;
+					align-items: center;
+					text-wrap: nowrap;
+					&:first-child{
+						margin-right: 18px;
+					}
+					&:last-child{
+						margin-left: 18px;
+					}
+					.contacts__info {
+						.contacts__title {
+							font-size: 14px;
+							font-weight: 700;
+						}
+						.contacts__text {
+							font-size: 18px;
+							font-weight: 400;
+						}
+						p {
+							margin: 8px;
+						}
+					}
+				}
+				
+			}
+		}
+	}
+	.main {
+		height: 988px;
+		.main__container{
+			display: flex;
+			justify-content: center;
+			.main__wrapper{
+				@include size($container-weight, 100%);
+				margin-top: 220px;
+				.main__block{
+					.main__text{
+						color: white;
+						.main__title {
+							font-size: 40px;
+							font-weight: 700;
+							margin-bottom: 25px;
+						}
+						.main__description {
+							max-width: 595px;
+							font-size: 20px;
+							line-height: 30px;
+							font-weight: 300;
+						}
+						span {
+							color: $color-primary;
+						}
+					}
+					.main__buttons {
+						display: flex;
+						margin-top: 60px;
+						button{
+							&:first-child {
+								margin-right: 12px;
+							}
+							&:last-child {
+								margin-left: 12px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

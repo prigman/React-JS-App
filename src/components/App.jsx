@@ -1,15 +1,17 @@
 import React from "react"
-import Counter from "./Counter"
-import InputChange from "./InputChange"
+// import Counter from "./Counter"
+// import InputChange from "./InputChange"
 import Header from "./Header"
-import '../styles/style.scss'
+import Main from "./Main"
+
 
 export default function App(){
 	return (
-		<div className="App">
-			<Counter/>
-			<InputChange/>
+		<div id="App">
+			{/* <Counter/>
+			<InputChange/> */}
 			<Header/>
+			<Main/>
 		</div>
 	)
 }
