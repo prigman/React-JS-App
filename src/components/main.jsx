@@ -1,4 +1,5 @@
 import React from "react"
+import '../styles/main.scss'
 import bgUrl from "/img/bg-image.jpg"
 import ButtonTransparent from "./ButtonTransparent"
 import ButtonPrimary from "./ButtonPrimary"

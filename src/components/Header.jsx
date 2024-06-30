@@ -1,4 +1,5 @@
 import React from "react"
+import '../styles/header.scss'
 import logoUrl from '/img/logo.svg'
 import phoneUrl from '/img/iPhone.svg'
 import chatUrl from '/img/Chat.svg'
@@ -10,13 +11,15 @@ export default function Header(){
 				<div className="header__logo">
 					<img src={logoUrl} alt="" />
 				</div>
-				<ul className="header__navbar">
-					<li>About Us</li>
-					<li>Services</li>
-					<li>Work</li>
-					<li>News</li>
-					<li>Contacts</li>
-				</ul>
+				<nav className="header__navbar">
+					<ul>
+						<li>About Us</li>
+						<li>Services</li>
+						<li>Work</li>
+						<li>News</li>
+						<li>Contacts</li>
+					</ul>
+				</nav>
 				<div className="header__contacts">
 					<div className="contacts__block">
 						<div className="contacts__image">
