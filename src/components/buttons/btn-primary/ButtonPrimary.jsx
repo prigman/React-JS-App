@@ -1,5 +1,7 @@
 import React from "react"
-import "../styles/btnStyles.scss"
+import "../btn_styles.scss"
+import "./btn_primary.scss"
+
 
 export default function ButtonTransparent(){
 	return(

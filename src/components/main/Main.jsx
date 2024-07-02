@@ -1,8 +1,8 @@
 import React from "react"
-import '../styles/main.scss'
+import './main.scss'
 import bgUrl from "/img/bg-image.jpg"
-import ButtonTransparent from "./ButtonTransparent"
-import ButtonPrimary from "./ButtonPrimary"
+import ButtonTransparent from "../buttons/btn-transparent/ButtonTransparent"
+import ButtonPrimary from "../buttons/btn-primary/ButtonPrimary"
 
 export default function Main(){
 	return (

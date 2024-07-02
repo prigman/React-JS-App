@@ -1,5 +1,5 @@
 import React from "react"
-import '../styles/header.scss'
+import './header.scss'
 import logoUrl from '/img/logo.svg'
 import phoneUrl from '/img/iPhone.svg'
 import chatUrl from '/img/Chat.svg'
