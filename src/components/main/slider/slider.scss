@@ -1,0 +1,31 @@
+@import '../../../styles/mixins.scss';
+
+.slider__container {
+	display: flex;
+	.slider__element {
+		width: 178px;
+		margin: 0 10px;
+		opacity: 30%;
+		cursor: pointer;
+		.slider__page-number {
+			margin-bottom: 15px;
+			color: white
+		}
+		.slider__line {
+			@include size(100%, 2px);
+			display: block;
+			background-color: white;
+			border-radius: 10px;
+		}
+		&:first-child {
+			margin: 0 10px 0 0;
+		}
+		&:last-child {
+			margin: 0 0 0 10px;
+		}
+	}
+	
+	.active {
+		opacity: 1;
+	}
+}
