@@ -1,12 +1,14 @@
 import React from "react"
-import "../btn_styles.scss"
-import "./btn_primary.scss"
+import btnStyles from "../btn_styles.module.scss"
+import btnPrimary from "./btn_primary.module.scss"
 
 
 export default function ButtonPrimary(){
 	return(
-		<button className="btn btn_primary">
-			Submit Request
-		</button>
+		<>
+			<button className={`${btnStyles.btn} ${btnPrimary.btn_primary}`}>
+				Submit Request
+			</button>
+		</>
 	)
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import './slider.scss'
+import slider from './slider.module.scss'
 import { ISlide } from "../../models"
 
 export default function Slider(){
@@ -15,18 +15,20 @@ export default function Slider(){
 	}
 	function toggleActiveStyles(index) {
 		if(slideState.slides[index] === slideState.activeSlide) 
-			return "slider__element active"
+			return `${slider.slider__element} ${slider.active}`
 		else
-			return "slider__element"
+			return `${slider.slider__element}`
 	}
 	return (
-		<div className="slider__container">
-			{slideState.slides.map((elements, index) => (
-				<div key={index} className={toggleActiveStyles(index)} onClick={() => toggleActive(index)}>
-					<h2 className="slider__page-number">0{index+1}</h2>
-					<span className="slider__line"></span>
-				</div>
-			))}
-		</div>
+		<>
+			<div className={slider.slider__container}>
+				{slideState.slides.map((elements, index) => (
+					<div key={index} className={toggleActiveStyles(index)} onClick={() => toggleActive(index)}>
+						<h2 className={slider.slider__number}>0{index+1}</h2>
+						<span className={slider.slider__line} />
+					</div>
+				))}
+			</div>
+		</>
 	)
 }
