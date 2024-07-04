@@ -3,13 +3,38 @@
 
 .main {
 	height: 988px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 32px;
+	padding-right: 32px;
+	.main__arrow {
+		&:first-child {
+			margin-right: 30px;
+		}
+		@include minSize(48px, 48px);
+		cursor: pointer;
+		background-color: white;
+		border-radius: 50%;
+		text-align: center;
+		user-select: none;
+		opacity: 50%;
+		span {
+			line-height: 1.5em;
+			font-size: 29px;
+		}
+		.active {
+			opacity: 1;
+		}
+	}
 	.main__container{
+		@include size($container-weight, 100%);
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		.main__wrapper{
-			@include size($container-weight, 100%);
-			margin-top: 220px;
-	
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			.main__slider {
 				display: flex;
 			}

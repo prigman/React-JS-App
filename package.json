@@ -10,7 +10,7 @@
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "sass": "^1.77.6",
     "sharp": "^0.33.4",
@@ -22,8 +22,8 @@
     "vite-plugin-inspect": "^0.8.4"
   },
   "dependencies": {
-    "@types/react": "^18.3.3",
     "@vitejs/plugin-react": "^4.3.1",
+    "html-react-parser": "^5.1.10",
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
