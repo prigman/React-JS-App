@@ -1,13 +1,12 @@
 export interface ISlide {
-	activeSlide?: {
-		id: number
-		title: string
-		description: string
-	},
-	slides : {
-		id: number
-		title : string
-		description: string
-	}[],
+	activeSlide?: ISlideTemplate
+	slides : ISlideTemplate[]
 
+}
+
+export interface ISlideTemplate {
+	id: number
+	title: string
+	description: string
+	bg: {}
 }

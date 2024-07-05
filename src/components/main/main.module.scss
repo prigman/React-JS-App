@@ -8,6 +8,8 @@
 	justify-content: space-between;
 	padding-left: 32px;
 	padding-right: 32px;
+	background-repeat: no-repeat;
+	background-size: cover;
 	.main__arrow {
 		&:first-child {
 			margin-right: 30px;
@@ -23,9 +25,9 @@
 			line-height: 1.5em;
 			font-size: 29px;
 		}
-		.active {
-			opacity: 1;
-		}
+	}
+	.active {
+		opacity: 1;
 	}
 	.main__container{
 		@include size($container-weight, 100%);
@@ -34,7 +36,7 @@
 		.main__wrapper{
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-evenly;
 			.main__slider {
 				display: flex;
 			}

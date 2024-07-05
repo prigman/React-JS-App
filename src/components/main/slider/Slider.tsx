@@ -8,9 +8,6 @@ interface Props {
 }
 
 export default function Slider({slideState, changeState} : Props){
-	useEffect(() => {
-		changeState({...slideState, activeSlide: slideState.slides[0]});
-	}, [])
 	function toggleActive(index : number) {
 		changeState({...slideState, activeSlide: slideState.slides[index]})
 	}

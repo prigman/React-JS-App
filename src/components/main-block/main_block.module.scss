@@ -6,7 +6,6 @@
 		.main__title {
 			font-size: 40px;
 			font-weight: 700;
-			margin-bottom: 25px;
 		}
 		.main__description {
 			max-width: 595px;
@@ -20,6 +19,7 @@
 	}
 	.main__buttons {
 		display: flex;
+		align-items: center;
 		margin-top: 60px;
 		button{
 			&:first-child {

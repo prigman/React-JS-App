@@ -1,4 +1,3 @@
-import React from "react"
 import parse from 'html-react-parser';
 import main_block from './main_block.module.scss'
 import ButtonPrimary from "../buttons/btn-primary/ButtonPrimary"
