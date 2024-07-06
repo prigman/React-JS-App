@@ -10,3 +10,8 @@ export interface ISlideTemplate {
 	description: string
 	bg: {}
 }
+
+export interface IProps {
+	title: string,
+	description: string
+}
