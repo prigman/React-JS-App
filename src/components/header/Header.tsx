@@ -3,6 +3,7 @@ import header from './header.module.scss'
 import logoUrl from '/img/logo.svg'
 import phoneUrl from '/img/iPhone.svg'
 import chatUrl from '/img/Chat.svg'
+import { Link } from "react-router-dom"
 
 export default function Header(){
 	return(
@@ -10,15 +11,15 @@ export default function Header(){
 			<header className={header.header}>
 				<div className={header.header__container}>
 					<div className={header.header__logo}>
-						<img src={logoUrl} alt="logo" />
+						<Link to='/'> <img src={logoUrl} alt="logo" /> </Link>
 					</div>
 					<nav className={header.header__navbar}>
 						<ul>
-							<li>About Us</li>
-							<li>Services</li>
-							<li>Work</li>
-							<li>News</li>
-							<li>Contacts</li>
+							<li><Link to='/about'> About Us </Link></li>
+							<li><Link to='/'> Services </Link></li>
+							<li><Link to='/'> Work </Link></li>
+							<li><Link to='/'> News </Link></li>
+							<li><Link to='/'> Contacts </Link></li>
 						</ul>
 					</nav>
 					<div className={header.header__contacts}>

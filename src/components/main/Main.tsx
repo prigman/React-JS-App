@@ -50,12 +50,16 @@ export default function Main(){
 		const currentIndex = slideState.slides.findIndex(slide => slideState.activeSlide && slide.id === slideState.activeSlide.id);
 		if (currentIndex < slideState.slides.length - 1)
 			changeState(prevState => ({ ...prevState, activeSlide: prevState.slides[currentIndex + 1] }));
+		else
+			changeState(prevState => ({ ...prevState, activeSlide: prevState.slides[0] }));
 	};
 
 	function prevSlide() {
 		const currentIndex = slideState.slides.findIndex(slide => slideState.activeSlide && slide.id === slideState.activeSlide.id);
 		if (currentIndex > 0)
 			changeState(prevState => ({...prevState, activeSlide: prevState.slides[currentIndex - 1] }));
+		else
+			changeState(prevState => ({ ...prevState, activeSlide: prevState.slides[prevState.slides.length-1] }));
 	};
 
 	return (

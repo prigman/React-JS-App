@@ -17,5 +17,14 @@ export default defineConfig(() => {
 		Inspect(),
 		react()
     ],
+	// build: {
+	// 	emptyOutDir: true,
+	// 	rollupOptions: {
+	// 		input: {
+	// 			main: resolve(__dirname, 'index.html'),
+	// 			about: resolve(__dirname, 'src/about/index.html')
+	// 		}
+	// 	}
+	// }
   };
 });

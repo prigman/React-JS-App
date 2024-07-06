@@ -20,10 +20,11 @@
 			ul{
 				display: flex;
 				li {
-					font-weight: 700;
-					text-wrap: nowrap;
+					a {
+						font-weight: 700;
+						text-wrap: nowrap;
+					}
 					margin: 0 20px;
-					cursor: pointer;
 					&:first-child{
 						margin: 0 20px 0 0;
 					}
