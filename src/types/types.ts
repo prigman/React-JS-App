@@ -15,3 +15,12 @@ export interface IProps {
 	title: string,
 	description: string
 }
+
+export interface IHeader {
+	fixed_class? : boolean
+	about? : boolean
+	services? : boolean
+	work? : boolean
+	news? : boolean
+	contacts? : boolean
+}

@@ -5,7 +5,7 @@ import bgUrl_2 from "/img/bg-image-2.jpg"
 import bgUrl_3 from "/img/bg-image-3.jpg"
 import bgUrl_4 from "/img/bg-image-4.jpg"
 import Slider from "./slider/Slider"
-import MainBlock from "../main-block/MainBlock"
+import Block from "../block/Block"
 import { ISlide } from "../../types/types"
 
 
@@ -64,20 +64,22 @@ export default function Main(){
 
 	return (
 		<>
-			<main style={styles} className={main.main}>
-				<div className={`${main.main__arrow} ${slideState.activeSlide !== slideState.slides[0] ? main.active : ''}`} onClick={prevSlide}>
-					<span>←</span>
-				</div>
-				<div className={main.main__container}>
-					<div className={main.main__wrapper}>
-						<MainBlock slideState={slideState} />
-						<div className={main.main__slider}>
-							<Slider slideState={slideState} changeState={changeState} />
+			<main className={main.main}>
+				<div style={styles} className={main.main__wrapper}>
+					<div className={`${main.main__arrow} ${slideState.activeSlide !== slideState.slides[0] ? main.active : ''}`} onClick={prevSlide}>
+						<span>←</span>
+					</div>
+					<div className={main.main__container}>
+						<div className={main.main__content}>
+							<Block slideState={slideState} />
+							<div className={main.main__slider}>
+								<Slider slideState={slideState} changeState={changeState} />
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className={`${main.main__arrow} ${slideState.activeSlide !== slideState.slides[slideState.slides.length-1] ? main.active : ''}`} onClick={nextSlide}>
-					<span>→</span>
+					<div className={`${main.main__arrow} ${slideState.activeSlide !== slideState.slides[slideState.slides.length-1] ? main.active : ''}`} onClick={nextSlide}>
+						<span>→</span>
+					</div>
 				</div>
 			</main>
 		</>

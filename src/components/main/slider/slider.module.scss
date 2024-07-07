@@ -24,9 +24,8 @@
 		&:last-child {
 			margin: 0 0 0 3px;
 		}
-	}
-	
-	.active {
-		opacity: 1;
+		&.active {
+			opacity: 1;
+		}
 	}
 }

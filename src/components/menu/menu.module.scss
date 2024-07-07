@@ -1,17 +1,19 @@
 .menu {
-	display: flex;
-	p {
-		margin: 0 5px;
-		
-		&:first-child{
-			margin: 0 5px 0 0;
+	margin: 40px 0;
+	ul {
+		display: flex;
+		li {
+			&::after {
+				content: "/";
+				padding: 0 10px;
+			}
+			&:last-child {
+				color: #9A9CA5;
+				&::after {
+					content: "";
+					padding: 0;
+				}
+			}
 		}
-		&:last-child {
-			margin: 0 0 0 5px;
-			color: #9A9CA5;
-		}
-	}
-	.menu__slash {
-		user-select: none;
 	}
 }

@@ -4,22 +4,17 @@
 .main {
 	height: 540px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-repeat: no-repeat;
+	justify-content: center;
 	background-size: cover;
-	padding-left: 32px;
-	padding-right: 32px;
-	background-color: #F4F5F6;
+	padding: 92px 32px 0 32px;
 	.main__container{
 		@include size($container-weight, 100%);
 		display: flex;
-		justify-content: center;
-		flex-direction: column;
 		.main__wrapper{
 			display: flex;
 			flex-direction: column;
-			justify-content: space-evenly;
+			justify-content: flex-start;
 			.main__slider {
 				display: flex;
 			}

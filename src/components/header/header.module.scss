@@ -2,17 +2,25 @@
 @import '../../styles/mixins.scss';
 
 .header {
+	&.transparent {
+		background: transparent;
+	}
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: white;
 	.header__container{
 		@include size($container-weight, 52px);
 		margin-top: 20px;
 		margin-bottom: 20px;
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
+		.header__logo {
+			a {
+				display: flex;
+			}
+		}
 		.header__navbar {
 			width: 100%;
 			display: flex;
@@ -21,8 +29,16 @@
 				display: flex;
 				li {
 					a {
+						transition: .1s ease-in-out;
 						font-weight: 700;
 						text-wrap: nowrap;
+						&.active {
+							color: $color-primary;
+						  }
+						&:hover {
+							transition: .1s ease-in-out;
+							color: $color-primary;
+						}
 					}
 					margin: 0 20px;
 					&:first-child{

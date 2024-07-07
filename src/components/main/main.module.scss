@@ -3,47 +3,49 @@
 
 .main {
 	height: 988px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-left: 32px;
-	padding-right: 32px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	.main__arrow {
-		&:first-child {
-			margin-right: 30px;
-		}
-		&:hover {
+	.main__wrapper {
+		display: flex;
+		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 0 32px;
+		.main__arrow {
+			&:first-child {
+				margin-right: 30px;
+			}
+			&:hover {
+				transition: .2s ease-in-out;
+				opacity: 1;
+			}
+			@include minSize(48px, 48px);
 			transition: .2s ease-in-out;
+			cursor: pointer;
+			background-color: white;
+			border-radius: 50%;
+			text-align: center;
+			user-select: none;
+			opacity: 50%;
+			span {
+				line-height: 1.5em;
+				font-size: 29px;
+			}
+		}
+		.active {
 			opacity: 1;
 		}
-		@include minSize(48px, 48px);
-		transition: .2s ease-in-out;
-		cursor: pointer;
-		background-color: white;
-		border-radius: 50%;
-		text-align: center;
-		user-select: none;
-		opacity: 50%;
-		span {
-			line-height: 1.5em;
-			font-size: 29px;
-		}
-	}
-	.active {
-		opacity: 1;
-	}
-	.main__container{
-		@include size($container-weight, 100%);
-		display: flex;
-		justify-content: flex-start;
-		.main__wrapper{
+		.main__container{
+			@include size($container-weight, 100%);
 			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-			.main__slider {
+			justify-content: flex-start;
+			.main__content{
 				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				.main__slider {
+					display: flex;
+				}
 			}
 		}
 	}
