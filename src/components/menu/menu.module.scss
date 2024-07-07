@@ -1,8 +1,9 @@
 .menu {
 	margin: 40px 0;
-	ul {
+	.menu__page {
 		display: flex;
-		li {
+		a {
+			text-transform: capitalize;
 			&::after {
 				content: "/";
 				padding: 0 10px;

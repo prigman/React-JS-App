@@ -4,18 +4,21 @@ import { useLocation } from 'react-router-dom'
 
 
 export default function Menu(){
-	console.log(useLocation())
+	const location = useLocation()
+	let currentLink = ''
+	const menuList = location.pathname.split('/').filter(page => page !== '').map(page => {
+		currentLink += `/${page}`
+		return (
+			<div className={menu.menu__page} key={page}>
+				<Link to='/'>Homepage</Link>
+				<Link to={currentLink}>{page}</Link>
+			</div>
+		)
+	})
 	return (
 		<>
 			<div className={menu.menu}>
-				<ul>
-					<li>
-						<Link to='/'>Homepage</Link>
-					</li>
-					<li>
-						<Link to='/about'>About Us</Link>
-					</li>
-				</ul>
+				{menuList}
 			</div>
 		</>
 	)
