@@ -36,7 +36,7 @@
 			opacity: 1;
 		}
 		.main__container{
-			@include size($container-weight, 100%);
+			@include size($container-width, 100%);
 			display: flex;
 			justify-content: flex-start;
 			.main__content{

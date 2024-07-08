@@ -11,7 +11,7 @@
 	align-items: center;
 	background: white;
 	.header__container{
-		@include size($container-weight, 52px);
+		@include size($container-width, 52px);
 		margin-top: 20px;
 		margin-bottom: 20px;
 		display: flex;

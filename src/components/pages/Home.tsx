@@ -1,7 +1,7 @@
 import '../../styles/style.scss'
 import Header from "../header/Header"
 import Main from "../main/Main"
-
+import WeOffer from "../we-offer/WeOffer"
 
 export default function Home(){
 	return (
@@ -9,6 +9,7 @@ export default function Home(){
 			<div id="App">
 				<Header/>
 				<Main/>
+				<WeOffer/>
 			</div>
 		</>
 	)

@@ -9,7 +9,7 @@
 	background-size: cover;
 	padding: 92px 32px 0 32px;
 	.main__container{
-		@include size($container-weight, 100%);
+		@include size($container-width, 100%);
 		display: flex;
 		.main__wrapper{
 			display: flex;

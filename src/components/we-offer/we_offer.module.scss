@@ -1,0 +1,26 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.offer {
+	height: 680px;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	.offer__container {
+		@include size($container-width, fit-content);
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		.offer__wrapper {
+			.offer__title {
+				h2 {
+					font-size: 46px;
+				}
+				margin-bottom: 60px;
+			}
+			.offer__list {
+				width: 420px;
+			}
+		}
+	}
+}

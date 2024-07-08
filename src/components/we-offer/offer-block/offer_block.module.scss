@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+
+.block {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	cursor: pointer;
+	&:last-child {
+		margin: 0;
+	}
+	.block__item {
+		width: 28px;
+    	text-align: center;
+		p {
+			color: $color-primary;
+			font-size: 50px;
+			font-weight: 300;
+		}
+	}
+	.block__wrapper {
+		width: 376px;
+		.block__title {
+			max-width: 240px;
+			h3 {
+				font-size: 28px;
+				line-height: 42px;
+			}
+			margin-bottom: 12px;
+		}
+		.block__description {
+			p {
+				color: $color-text;
+				font-weight: 400;
+				line-height: 25.6px;
+			}
+		}
+	}
+}
