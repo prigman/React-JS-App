@@ -15,6 +15,7 @@ import imgUrl from '/img/check.svg'
 import FooterForm from '../components/footer-form/FooterForm'
 import ScrollToTop from '../components/ScrollToTop'
 import { useEffect } from 'react'
+import RelatedProjects from '../components/related-projects/RelatedProjects'
 
 export default function Home(){
 	const imageList = [bgUrl_1, bgUrl_2, bgUrl_3, bgUrl_4, bgUrl_about, bgUrl_work, bgUrl_contacts, bgUrl_news, bgUrl_services, imgUrl]
@@ -30,6 +31,7 @@ export default function Home(){
 				<Header/>
 				<Main {...imageList}/>
 				<WeOffer/>
+				<RelatedProjects />
 				<FooterForm />
 			</div>
 		</>

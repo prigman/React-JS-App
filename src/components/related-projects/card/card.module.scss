@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.card {
+	display: flex;
+	position: relative;
+	margin: 0 30px 0 0;
+	height: 440px;
+	cursor: pointer;
+	&:last-child {
+		margin: 0;
+	}
+	box-shadow: 0px 7px 20px #9a9ca52b;
+	.card__img {
+		
+	}
+	.card__info {
+		width: 100%;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		bottom: 0;
+		background-color: white;
+		padding: 24px 0 24px 0;
+		.card__title {
+			margin-bottom: 6px;
+		}
+		.card__text {
+			font-size: 14px;
+			color: $color-text;
+		}
+		button {
+			margin-top: 24px;
+		}
+		&:hover {
+			box-shadow: 0px 7px 20px #46464b2b;
+		}
+	}
+}

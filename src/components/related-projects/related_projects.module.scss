@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.section__container {
+	height: 972px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.section__wrapper {
+		width: $container-width;
+		display: flex;
+		flex-direction: column;
+		.section__title {
+		}
+		.section__arrows {
+			display: flex;
+			margin-bottom: 60px;
+			justify-content: flex-end;
+			cursor: pointer;
+			.section__arrow {
+				font-size: 30px;
+				margin: 0 27px 0 0;
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+		.section__content {
+			display: flex;
+		}
+		.section__works {
+			margin-top: 85px;
+			display: flex;
+			justify-content: center;
+			.works__title {
+				margin-right: 40px;
+			}
+		}
+	}
+}

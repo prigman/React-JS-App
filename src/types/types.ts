@@ -4,15 +4,19 @@ export interface ISlide {
 
 }
 
+export interface ISlideRelated {
+	activeSlides?: ISlideTemplate[]
+	slides: ISlideTemplate[]
+}
+
 export interface ISlideTemplate {
-	id: number
 	title: string
 	description: string
-	bg: {}
+	img: string
 }
 
 export interface IProps {
-	title: string,
+	title: string
 	description: string
 }
 

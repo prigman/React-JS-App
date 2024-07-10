@@ -22,7 +22,7 @@ export default function Slider({slideState, changeState} : Props){
 			<div className={slider.slider__container}>
 				{slideState.slides.map((slide, index) => (
 					<div key={index} className={toggleActiveStyles(index)} onClick={() => toggleActive(index)}>
-						<h2 className={slider.slider__number}>0{slide.id}</h2>
+						<h2 className={slider.slider__number}>0{index+1}</h2>
 						<span className={slider.slider__line} />
 					</div>
 				))}
