@@ -4,9 +4,7 @@
 .main {
 	height: 540px;
 	display: flex;
-	background-repeat: no-repeat;
 	justify-content: center;
-	background-size: cover;
 	padding: 92px 32px 0 32px;
 	.main__container{
 		@include size($container-width, 100%);

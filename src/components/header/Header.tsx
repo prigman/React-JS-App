@@ -19,10 +19,10 @@ export default function Header({fixed_class, about, services, work, news, contac
 						<nav className={header.header__navbar}>
 							<ul>
 								<li><Link className={about ? header.active : ''} to='/about'> About Us </Link></li>
-								<li><Link className={services ? header.active : ''} to='/'> Services </Link></li>
-								<li><Link className={work ? header.active : ''} to='/'> Work </Link></li>
-								<li><Link className={news ? header.active : ''} to='/'> News </Link></li>
-								<li><Link className={contacts ? header.active : ''} to='/'> Contacts </Link></li>
+								<li><Link className={services ? header.active : ''} to='/services'> Services </Link></li>
+								<li><Link className={work ? header.active : ''} to='/work'> Work </Link></li>
+								<li><Link className={news ? header.active : ''} to='/news'> News </Link></li>
+								<li><Link className={contacts ? header.active : ''} to='/contacts'> Contacts </Link></li>
 							</ul>
 						</nav>
 						<div className={header.header__contacts}>

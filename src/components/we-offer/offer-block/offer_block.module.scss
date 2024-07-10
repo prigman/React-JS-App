@@ -18,22 +18,4 @@
 			font-weight: 300;
 		}
 	}
-	.block__wrapper {
-		width: 376px;
-		.block__title {
-			max-width: 240px;
-			h3 {
-				font-size: 28px;
-				line-height: 42px;
-			}
-			margin-bottom: 12px;
-		}
-		.block__description {
-			p {
-				color: $color-text;
-				font-weight: 400;
-				line-height: 25.6px;
-			}
-		}
-	}
 }

@@ -18,7 +18,7 @@ export default function WeOffer(){
 	
 	return (
 		<>
-			<div className={styles.offer}>
+			<section className={styles.offer}>
 				<div className={styles.offer__container}>
 					<div className={styles.offer__img}>
 						<img src={img} alt="kitchen" />						
@@ -34,7 +34,7 @@ export default function WeOffer(){
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	)
 }

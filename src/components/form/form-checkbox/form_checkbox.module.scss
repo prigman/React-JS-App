@@ -1,0 +1,31 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.checkbox__container {
+	text-align: left;
+	.checkbox__label {
+		line-height: 21px;
+		display: flex;
+		cursor: pointer;
+		.checkbox {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+		}
+		.checkbox__span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 5px 12px 0 0;
+			height: 16px;
+			width: 16px;
+			background-color: $color-background;
+		  	border-radius: 4px;
+			user-select: none;
+		}
+		.checked {
+			background-color: $color-primary;
+		}
+	}
+}
+	

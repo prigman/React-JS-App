@@ -16,6 +16,14 @@ export interface IProps {
 	description: string
 }
 
+export interface IForm {
+	inputType : string
+	inputId : string
+	inputName : string
+	inputPlaceholder : string
+	text? : string
+}
+
 export interface IHeader {
 	fixed_class? : boolean
 	about? : boolean

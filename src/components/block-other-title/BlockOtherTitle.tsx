@@ -1,8 +1,8 @@
-import block from './block_other.module.scss'
+import block from './block_other_title.module.scss'
 import { IProps } from '../../types/types'
 import parse from 'html-react-parser';
 
-export default function BlockOther({title, description} : IProps){
+export default function BlockOtherTitle({title, description} : IProps){
 	
 	return (
 		<>

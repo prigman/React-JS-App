@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react"
 import main from './main.module.scss'
-import bgUrl_1 from "/img/bg-image.jpg"
-import bgUrl_2 from "/img/bg-image-2.jpg"
-import bgUrl_3 from "/img/bg-image-3.jpg"
-import bgUrl_4 from "/img/bg-image-4.jpg"
 import Slider from "./slider/Slider"
 import Block from "../block/Block"
 import { ISlide } from "../../types/types"
 
 
-export default function Main(){
+export default function Main(imageList : string[]){
+
 	const [slideState, changeState] = useState<ISlide>(
 		{
 			activeSlide: undefined,
@@ -18,25 +15,25 @@ export default function Main(){
 					id: 1,
 					title:'CREATE <span>X</span><br/>CONSTRUCTION',
 					description: 'Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.',
-					bg: bgUrl_1
+					bg: imageList[0]
 				}, 
 				{
 					id: 2,
 					title: 'CREATE <span>NEW</span><br/> IDEAS',
 					description: 'Lorem ipsum dolor sit beatae voluptates est laboriosam illo laborum, quasi cumque debitis facere inventore fugit at. Recusandae, excepturi? Nesciunt',
-					bg: bgUrl_2
+					bg: imageList[1]
 				}, 
 				{
 					id: 3,
 					title: 'MAKE PLANS',
 					description: 'amet consectetur adipisicing elit. Consequatur rerum exercitationem iusto modi maxime',
-					bg: bgUrl_3
+					bg: imageList[2]
 				}, 
 				{
 					id: 4,
 					title: 'LOOK IN THE<br/> <span>FUTURE</span>',
 					description: 'dolor sit amet consectetur adipisicing elit. Molestias reiciendis sint, provident laborum rem dignissimos beatae suscipit dolorum sapiente nihil nostrum, ea ratione voluptatibus aspernatur magnam deserunt? Eius, vitae quod?',
-					bg: bgUrl_4
+					bg: imageList[3]
 				}
 			]
 		}
@@ -65,7 +62,7 @@ export default function Main(){
 	return (
 		<>
 			<main className={main.main}>
-				<div style={styles} className={main.main__wrapper}>
+				<div style={styles} className={`${main.main__wrapper} background`}>
 					<div className={`${main.main__arrow} ${slideState.activeSlide !== slideState.slides[0] ? main.active : ''}`} onClick={prevSlide}>
 						<span>←</span>
 					</div>
