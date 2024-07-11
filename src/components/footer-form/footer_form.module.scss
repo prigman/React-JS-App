@@ -21,7 +21,9 @@
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
-					margin: 24px 0;
+					button {
+						margin: 24px auto 0;
+					}
 				}
 			}
 		}

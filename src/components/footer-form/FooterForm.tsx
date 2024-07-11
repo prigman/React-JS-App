@@ -10,22 +10,16 @@ export default function FooterForm(){
 	const formElements : IForm[] = [
 		{
 			inputType: 'text',
-			inputId: 'name',
-			inputName: 'name',
 			inputPlaceholder: 'Your name',
 			text: 'Name*',
 		},
 		{
 			inputType: 'tel',
-			inputId: 'phone',
-			inputName: 'phone',
 			inputPlaceholder: 'Your phone number',
 			text: 'Phone*',
 		},
 		{
 			inputType: 'email',
-			inputId: 'email',
-			inputName: 'email',
 			inputPlaceholder: 'Your working email',
 			text: 'Email',
 		},
@@ -37,21 +31,19 @@ export default function FooterForm(){
 					<div className={styles.form}>
 						<div className={styles.form__content}>
 							<h3>A quick way to discuss details</h3>
-							<form action="" className={styles.form__block}>
+							<form className={styles.form__block}>
 								{formElements.map((element, index) => (
 									<FormInput 
 										key={index}
 										inputType={element.inputType}
-										inputId={element.inputId}
-										inputName={element.inputName}
 										inputPlaceholder={element.inputPlaceholder}
 										text={element.text}
 									/>
 								))}
 								<FormTextarea />
 								<FormCheckbox />
+								<ButtonPrimary text='Send request' />
 							</form>
-							<ButtonPrimary text='Send request' />
 						</div>
 					</div>
 				</div>

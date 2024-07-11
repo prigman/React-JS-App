@@ -4,11 +4,6 @@ export interface ISlide {
 
 }
 
-export interface ISlideRelated {
-	activeSlides?: ISlideTemplate[]
-	slides: ISlideTemplate[]
-}
-
 export interface ISlideTemplate {
 	title: string
 	description: string
@@ -22,8 +17,6 @@ export interface IProps {
 
 export interface IForm {
 	inputType : string
-	inputId : string
-	inputName : string
 	inputPlaceholder : string
 	text? : string
 }
