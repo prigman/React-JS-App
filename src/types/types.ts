@@ -17,6 +17,8 @@ export interface IProps {
 
 export interface IForm {
 	inputType : string
+	inputId: string
+	inputName: string
 	inputPlaceholder : string
 	text? : string
 }
